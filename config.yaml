@@ -1,0 +1,22 @@
+# =============================================================================
+# NIRPS Posemeter Analysis Configuration
+# =============================================================================
+
+# List of object names to keep in the analysis.
+# Only observations whose OBJECT header keyword matches one of these names
+# will be processed. Use an empty list [] to include all non-calibration objects.
+objects:
+  - Proxima
+
+# If True, the first data point of each posemeter time series is discarded
+# before computing RMS and median statistics. This removes occasional spikes
+# caused by the detector settling at the start of an exposure.
+reject_first_point: True
+
+# Minimum flux threshold — observations with a median fiber difference below
+# this value are skipped (typically very faint targets or failed exposures).
+min_flux_threshold: 0.1
+
+# RMS threshold for flagging unstable observations. Files with RMS above this
+# value are highlighted in the summary and shown in the offenders plot.
+high_rms_threshold: 0.1

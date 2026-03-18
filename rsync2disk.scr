@@ -1,0 +1,1 @@
+rsync -av --compress -e "ssh" spirou@rali:/space/spirou/posemeter/ /Users/eartigau/GitHubProjects/nirps_posemeter/data/

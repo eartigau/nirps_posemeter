@@ -48,9 +48,11 @@ After the sync, `data/` will contain one `*_posemeter.fits` file per NIRPS obser
 
 ---
 
-### 2 — (Optional) Extract posemeter from full NIRPS files
+### 2 — (Expert) Extract posemeter from full NIRPS files
 
-If you have the full, multi-extension NIRPS FITS files locally instead of the pre-extracted posemeter files, use `extract_posemeter.py` to pull out the posemeter extension:
+> **This step requires direct access to the NIRPS reduction server.** Most users should skip it and use `rsync2disk.scr` (step 1) to download files that have already been extracted. Only proceed here if you are working on the server itself and need to re-extract posemeter data from raw full-frame NIRPS FITS files.
+
+If you have the full, multi-extension NIRPS FITS files on the server instead of the pre-extracted posemeter files, use `extract_posemeter.py` to pull out the posemeter extension:
 
 ```bash
 # Single file
